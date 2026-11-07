@@ -1,0 +1,1033 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>BIO LAB 14 | Гемоглобин және миоглобин</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="app">
+
+<main class="main">
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-icon">🧬</div>
+    <div>
+      <b>BIO LAB</b>
+      <small>Биология • 1-курс • 14-тақырып</small>
+    </div>
+  </div>
+
+  <div class="top-actions">
+    <div class="timer">
+      ⏱ <span id="lessonClock">00:00</span>
+      <small>/ 80:00</small>
+    </div>
+    <button id="fullscreenBtn"
+            class="btn secondary">
+      ⛶ Толық экран
+    </button>
+  </div>
+</header>
+
+<!-- 0. КІРІСПЕ -->
+<section class="screen active" id="page-0">
+  <div class="hero">
+    <div class="eyebrow">14-ТАҚЫРЫП • БИОЛОГИЯ</div>
+
+    <h1>
+      Гемоглобин
+      <span>және миоглобин</span>
+    </h1>
+
+    <p>
+      Адам ағзасындағы оттегінің тасымалдануы,
+      гемоглобин мен миоглобиннің құрылымы,
+      қызметі және биологиялық маңызы.
+    </p>
+
+    <div class="hero-stats">
+      <div><b>80</b><small>минут</small></div>
+      <div><b>24</b><small>оқушыға дейін</small></div>
+      <div><b>3</b><small>команда</small></div>
+      <div><b>3</b><small>ойын</small></div>
+    </div>
+
+    <button class="btn primary large"
+            onclick="goTo(1)">
+      Сабақты бастау →
+    </button>
+  </div>
+
+  <h2>Сабақтың мақсаттары</h2>
+  <div class="cards three">
+    <article class="card">
+      <div class="emoji">🩸</div>
+      <h3>Құрылым</h3>
+      <p>
+        Гемоглобин мен миоглобиннің
+        субъбірліктері мен гем тобын зерттеу.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="emoji">🫁</div>
+      <h3>Қызмет</h3>
+      <p>
+        Оттегінің өкпеден ұлпаларға
+        тасымалдану жолын түсіндіру.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="emoji">🏆</div>
+      <h3>Талдау</h3>
+      <p>
+        Күрделі жағдаяттарды талдап,
+        ғылыми дәлелмен жауап беру.
+      </p>
+    </article>
+  </div>
+
+  <div class="callout">
+    <b>Сабақтың басты мәселесі:</b>
+    Неліктен гемоглобин оттегіні тасымалдауға,
+    ал миоглобин оны бұлшықетте сақтауға бейімделген?
+  </div>
+</section>
+
+<!-- 1. ЭРИТРОЦИТ -->
+<section class="screen" id="page-1">
+  <div class="eyebrow">ТҮСІНДІРУ • 5 МИНУТ</div>
+  <h1>🩸 Қан және эритроциттер</h1>
+
+  <p class="lead">
+    Қан — ағзаның сұйық ұлпасы.
+    Ол тыныс алу газдарын, қоректік заттарды,
+    гормондарды және алмасу өнімдерін тасымалдайды.
+  </p>
+
+  <div class="photos">
+    <figure class="photo">
+      <img
+        loading="lazy"
+        src="https://iiif.wellcomecollection.org/image/B0004827.jpg/full/full/0/default.jpg"
+        alt="Электрондық микроскоптағы эритроциттер">
+      <figcaption>
+        Эритроциттердің электрондық микросуреті.
+        Wellcome Collection.
+      </figcaption>
+    </figure>
+
+    <figure class="photo">
+      <img
+        loading="lazy"
+        src="https://www.ksgr.ch/sites/default/files/2024-05/4-3-2015.jpg"
+        alt="Эритроциттердің екі жағы ойыс пішіні">
+      <figcaption>
+        Эритроциттердің пішіні.
+        Kantonsspital Graubünden.
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <h3>Эритроцит деген не?</h3>
+      <p>
+        Қанның қызыл жасушасы.
+        Адамның жетілген эритроциттерінде
+        ядро болмайды.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Пішінінің артықшылығы</h3>
+      <p>
+        Эритроциттің екі жағы ойыс.
+        Бұл пішін газ алмасуға қолайлы
+        және қылтамырлардан өтуге көмектеседі.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Негізгі қызметі</h3>
+      <p>
+        Эритроциттердегі гемоглобин
+        өкпеден оттегіні қабылдап,
+        ұлпаларға жеткізеді.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Гемоглобинмен байланысы</h3>
+      <p>
+        Гемоглобин эритроциттің ішінде
+        көп мөлшерде орналасады.
+        Ол — жасуша емес, нәруыз.
+      </p>
+    </article>
+  </div>
+
+  <div class="callout">
+    <b>Талдау:</b> Эритроцит пішіні өзгерсе,
+    оның оттегіні тасымалдау қызметіне
+    қандай әсер болуы мүмкін?
+  </div>
+</section>
+
+<!-- 2. ГЕМОГЛОБИН -->
+<section class="screen" id="page-2">
+  <div class="eyebrow">ТҮСІНДІРУ • 6 МИНУТ</div>
+  <h1>🔬 Гемоглобиннің молекулалық құрылысы</h1>
+
+  <p class="lead">
+    Гемоглобин (Hb) — гем тобы бар күрделі нәруыз.
+    Оның негізгі қызметі — оттегіні
+    қайтымды байланыстырып, қан арқылы тасымалдау.
+  </p>
+
+  <div class="photos">
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Hemoglobin-3D-model-ribbons.png"
+        alt="Гемоглобиннің 3D құрылымы">
+      <figcaption>
+        Гемоглобиннің төрт субъбірлігі.
+        Hoa112008 / Wikimedia Commons.
+      </figcaption>
+    </figure>
+
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://wisc.pb.unizin.org/app/uploads/sites/126/2017/08/CNX_Chem_19_02_heme2.jpg"
+        alt="Гемоглобиннің төрт тізбегі және гем топтары">
+      <figcaption>
+        Гемоглобин және гем топтарының
+        кеңістіктік орналасуы.
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="cards three">
+    <article class="card">
+      <h3>Төрт тізбек</h3>
+      <p>
+        Ересек адамның негізгі HbA гемоглобині
+        екі α және екі β тізбектен тұрады.
+      </p>
+      <div class="formula">α₂β₂</div>
+    </article>
+
+    <article class="card">
+      <h3>Төрт гем</h3>
+      <p>
+        Әр глобин тізбегінде бір гем тобы бар.
+        Әр гемнің құрамында Fe²⁺ орналасады.
+      </p>
+      <div class="formula">4 гем</div>
+    </article>
+
+    <article class="card">
+      <h3>Төрт O₂</h3>
+      <p>
+        Бір Hb молекуласы толық қаныққанда
+        төрт O₂ молекуласын байланыстырады.
+      </p>
+      <div class="formula">4 O₂</div>
+    </article>
+  </div>
+
+  <div class="photos">
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Heme_b.svg/1920px-Heme_b.svg.png"
+        alt="Гем B молекуласының құрылысы">
+      <figcaption>
+        Гем B тобы. Ортасында темір ионы бар.
+        Wikimedia Commons.
+      </figcaption>
+    </figure>
+
+    <div class="diagram">
+      <h3>Шартты құрылымдық сызба</h3>
+
+      <div class="hb-model">
+        <span class="subunit s1">α₁<br>Fe²⁺</span>
+        <span class="subunit s2">β₁<br>Fe²⁺</span>
+        <span class="subunit s3">β₂<br>Fe²⁺</span>
+        <span class="subunit s4">α₂<br>Fe²⁺</span>
+      </div>
+
+      <p>
+        Әр субъбірлікте бір гем
+        және бір оттегіні байланыстыру орны бар.
+      </p>
+    </div>
+  </div>
+
+  <div class="formula-panel">
+    <h3>Оттегімен байланысу</h3>
+    <strong>Hb + 4O₂ ⇌ Hb(O₂)₄</strong>
+    <p>
+      Толық қанығуды көрсететін
+      жеңілдетілген теңдеу.
+      Байланыс қайтымды болады.
+    </p>
+  </div>
+</section>
+
+<!-- 3. МИОГЛОБИН -->
+<section class="screen" id="page-3">
+  <div class="eyebrow">ТҮСІНДІРУ • 4 МИНУТ</div>
+  <h1>💪 Миоглобиннің құрылысы мен қызметі</h1>
+
+  <p class="lead">
+    Миоглобин (Mb) — қаңқа және жүрек
+    бұлшықеттеріндегі оттегіні байланыстыратын нәруыз.
+  </p>
+
+  <div class="photos">
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Myoglobin.png?width=850"
+        alt="Миоглобиннің 3D молекулалық моделі">
+      <figcaption>
+        Миоглобиннің 3D моделі.
+        AzaToth / Wikimedia Commons.
+      </figcaption>
+    </figure>
+
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Myoglobin_and_heme.png?width=850"
+        alt="Миоглобин және гем тобы">
+      <figcaption>
+        Миоглобиннің глобин тізбегі мен гемі.
+        Thomas Splettstoesser / Wikimedia Commons.
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <h3>Құрылысы</h3>
+      <p>
+        Бір полипептидтік тізбектен
+        және бір гем тобынан тұрады.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Қызметі</h3>
+      <p>
+        Бұлшықеттегі оттегі қорын
+        сақтауға және оттегінің жасуша
+        ішінде таралуына көмектеседі.
+      </p>
+    </article>
+  </div>
+
+  <div class="formula-panel purple">
+    <h3>Миоглобиннің O₂ байланыстыруы</h3>
+    <strong>Mb + O₂ ⇌ MbO₂</strong>
+    <p>
+      Бір миоглобин бір O₂ молекуласын
+      байланыстыра алады.
+    </p>
+  </div>
+
+  <div class="callout">
+    <b>Ойлан:</b>
+    Неліктен миоглобиннің оттегіге
+    жақындығы гемоглобинге қарағанда жоғары?
+  </div>
+</section>
+
+<!-- 4. САЛЫСТЫРУ МЕН ГРАФИК -->
+<section class="screen" id="page-4">
+  <div class="eyebrow">ТҮСІНДІРУ • 5 МИНУТ</div>
+  <h1>📈 Оттегіге жақындық және Бор әсері</h1>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Белгісі</th>
+          <th>Гемоглобин</th>
+          <th>Миоглобин</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Орналасуы</td>
+          <td>Эритроцит</td>
+          <td>Бұлшықет</td>
+        </tr>
+        <tr>
+          <td>Тізбек саны</td>
+          <td>4</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Гем саны</td>
+          <td>4</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>O₂ байланыстыруы</td>
+          <td>4 O₂</td>
+          <td>1 O₂</td>
+        </tr>
+        <tr>
+          <td>Басты рөлі</td>
+          <td>Тасымалдау</td>
+          <td>Сақтау және тарату</td>
+        </tr>
+        <tr>
+          <td>Қанығу қисығы</td>
+          <td>S тәрізді</td>
+          <td>Гиперболалық</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card chart-card">
+    <h3>Гемоглобин мен миоглобиннің қанығуы</h3>
+
+    <svg id="oxygenChart"
+         viewBox="0 0 660 380"
+         role="img"
+         aria-label="Гемоглобин мен миоглобиннің қанығу графигі">
+    </svg>
+
+    <p>
+      Қызыл қисық — гемоглобин,
+      күлгін қисық — миоглобин.
+      График оқу мақсатындағы жуық модель.
+    </p>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <h3>Кооперативтілік</h3>
+      <p>
+        Гемоглобинге алғашқы O₂ байланысқаннан
+        кейін қалған орындардың оттегіге
+        жақындығы артады.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Бор әсері</h3>
+      <p>
+        CO₂ көбеюі және рН төмендеуі
+        гемоглобиннің O₂-ге жақындығын
+        азайтып, оны босатуды жеңілдетеді.
+      </p>
+    </article>
+  </div>
+
+  <div class="callout">
+    <b>Күрделі сұрақ:</b>
+    Бұлшықет белсенді жұмыс істегенде
+    CO₂ көбейсе, гемоглобиннің
+    оттегіні босатуына не болады?
+  </div>
+</section>
+
+<!-- 5. YOUTUBE -->
+<section class="screen" id="page-5">
+  <div class="eyebrow">YOUTUBE • 8 МИНУТ</div>
+  <h1>▶️ Бейнесабақ және талдау</h1>
+
+  <p class="lead">
+    Екі бейнесабақтың маңызды бөліктерін көріп,
+    кейін сұрақтарды талқылаңдар.
+    Видеоларды өздерің бастайсыңдар.
+  </p>
+
+  <div class="video-picker">
+    <button class="btn primary" data-video="0">
+      ▶ 1-видео: құрылымы мен қызметі
+    </button>
+    <button class="btn secondary" data-video="1">
+      ▶ 2-видео: екі нәруыздың құрылысы
+    </button>
+    <button class="btn danger" id="stopVideo">
+      ⏹ Тоқтату
+    </button>
+  </div>
+
+  <div class="video-box">
+    <iframe id="youtubePlayer"
+            title="Биология бейнесабағы"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </div>
+
+  <p id="videoTitle" class="video-title">
+    Көру үшін жоғарыдан бейне таңда.
+  </p>
+
+  <p>
+    Егер YouTube бейнені сайт ішінде ашуға
+    рұқсат бермесе:
+    <a id="videoExternal" target="_blank"
+       rel="noopener noreferrer"
+       href="https://www.youtube.com/watch?v=iMpjcdbTtLw">
+      YouTube-та ашу
+    </a>
+  </p>
+
+  <div class="card">
+    <h3>Көргеннен кейін талқылау</h3>
+    <ol class="reading-list">
+      <li>
+        Гемоглобин мен миоглобиннің
+        құрылымдық айырмашылығы қандай?
+      </li>
+      <li>
+        Неліктен гемоглобиннің қанығу қисығы
+        S тәрізді?
+      </li>
+      <li>
+        Миоглобиннің бұлшықет үшін
+        маңызы неде?
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 6. КОНСПЕКТ -->
+<section class="screen" id="page-6">
+  <div class="eyebrow">ДӘПТЕРМЕН ЖҰМЫС • 14 МИНУТ</div>
+  <h1>📚 Толық конспект</h1>
+
+  <p class="lead">
+    Алғашқы 12 тармақ — дәптерге жазылатын
+    негізгі конспект. Одан кейінгі
+    бөлімдер — тереңдетілген түсіндірме.
+  </p>
+
+  <div class="notes" id="notesContent">
+
+    <h2>§14. Гемоглобин және миоглобин</h2>
+
+    <h3>1. Қанның тасымалдау қызметі</h3>
+    <p>
+      Қан — ағзаның сұйық ұлпасы.
+      Ол оттегіні, көмірқышқыл газын,
+      қоректік заттарды, гормондарды және
+      зат алмасу өнімдерін тасымалдайды.
+      Оттегі жасушалық тыныс алу үшін қажет.
+    </p>
+
+    <h3>2. Эритроциттер</h3>
+    <p>
+      Эритроциттер — қанның қызыл жасушалары.
+      Олардың пішіні екі жағы ойыс дискке ұқсайды.
+      Адамның жетілген эритроциттерінде ядро
+      болмайды. Эритроциттерде гемоглобин бар.
+    </p>
+
+    <h3>3. Гемоглобин</h3>
+    <p>
+      Гемоглобин — эритроциттерде болатын,
+      құрамында темірі бар күрделі нәруыз.
+      Оның негізгі қызметі — оттегіні
+      өкпеден ағзаның ұлпаларына тасымалдау.
+      Гемоглобин Hb деп белгіленеді.
+    </p>
+
+    <h3>4. Гемоглобиннің құрылысы</h3>
+    <p>
+      Ересек адамның негізгі HbA гемоглобині
+      төрт полипептидтік тізбектен тұрады.
+      Оның екі тізбегі альфа, екеуі бета.
+      Құрылымының жазылуы: α₂β₂.
+    </p>
+
+    <h3>5. Гем тобы және темір</h3>
+    <p>
+      Әр глобин тізбегінде бір гем тобы орналасады.
+      Гемнің құрамында Fe²⁺ темір ионы бар.
+      Оттегі осы гем арқылы байланысады.
+      Бір Hb молекуласында төрт гем тобы болады.
+    </p>
+
+    <h3>6. Оттегінің байланысуы</h3>
+    <p>
+      Бір гемоглобин молекуласы толық қаныққанда
+      төрт O₂ молекуласын байланыстырады.
+      Байланысу қайтымды жүреді.
+      Жеңілдетілген теңдеу:
+      Hb + 4O₂ ⇌ Hb(O₂)₄.
+    </p>
+
+    <h3>7. Өкпедегі газ алмасу</h3>
+    <p>
+      Өкпеде оттегінің парциалдық қысымы жоғары.
+      Сондықтан O₂ альвеолалардан
+      қанға диффузияланады және
+      гемоглобинмен байланысады.
+    </p>
+
+    <h3>8. Ұлпалардағы газ алмасу</h3>
+    <p>
+      Ұлпалардың жасушалары оттегіні пайдаланады.
+      Сондықтан олардың айналасында O₂-нің
+      парциалдық қысымы төмен болады.
+      Бұл гемоглобиннің оттегіні босатуына
+      көмектеседі.
+    </p>
+
+    <h3>9. Миоглобин</h3>
+    <p>
+      Миоглобин — қаңқа және жүрек
+      бұлшықеттерінде кездесетін нәруыз.
+      Ол оттегі қорын сақтауға және оның
+      жасуша ішінде таралуына көмектеседі.
+      Миоглобин Mb деп белгіленеді.
+    </p>
+
+    <h3>10. Миоглобиннің құрылысы</h3>
+    <p>
+      Миоглобин бір полипептидтік тізбектен
+      және бір гем тобынан тұрады.
+      Бір миоглобин молекуласы бір O₂
+      байланыстыра алады.
+      Теңдеуі: Mb + O₂ ⇌ MbO₂.
+    </p>
+
+    <h3>11. Негізгі айырмашылықтары</h3>
+    <p>
+      Гемоглобин төрт тізбекті, төрт гемі бар
+      және қанмен оттегіні тасымалдайды.
+      Миоглобин бір тізбекті, бір гемі бар
+      және бұлшықетте оттегіні сақтауға көмектеседі.
+      Миоглобиннің O₂-ге жақындығы жоғары.
+    </p>
+
+    <h3>12. Биологиялық маңызы</h3>
+    <p>
+      Гемоглобин мен миоглобин ағзаның оттегімен
+      қамтамасыз етілуіне қатысады.
+      Олардың құрылыстары әртүрлі болғандықтан,
+      атқаратын қызметтері де ерекшеленеді.
+    </p>
+
+    <hr>
+
+    <h2>Тереңдетілген мәліметтер</h2>
+
+    <h3>13. Оксигемоглобин</h3>
+    <p>
+      Оттегімен байланысқан гемоглобин
+      оксигемоглобин деп аталады.
+      Ол өкпеде түзіліп, ұлпаларда
+      оттегіні босата алады.
+    </p>
+
+    <h3>14. Кооперативтілік</h3>
+    <p>
+      Гемоглобиннің бір субъбірлігі O₂
+      байланыстырған кезде қалған
+      субъбірліктердің оттегіге жақындығы
+      артады. Бұл оң кооперативтілік деп аталады.
+    </p>
+
+    <h3>15. Оттегіге жақындық</h3>
+    <p>
+      Оттегіге жақындық — нәруыздың O₂-мен
+      байланысу бейімділігі.
+      Миоглобиннің жақындығы гемоглобинге
+      қарағанда жоғары.
+    </p>
+
+    <h3>16. Қанығу қисықтары</h3>
+    <p>
+      Гемоглобиннің оттегімен қанығу
+      қисығы S тәрізді болады.
+      Миоглобиннің қисығы гиперболалық.
+      Бұл олардың O₂ байланыстыру
+      ерекшеліктеріне байланысты.
+    </p>
+
+    <h3>17. Бор әсері</h3>
+    <p>
+      Көмірқышқыл газы көбейіп,
+      рН төмендеген жағдайда гемоглобиннің
+      оттегіге жақындығы азаяды.
+      Осылайша ұлпаларға оттегіні
+      босату жеңілдейді.
+    </p>
+
+    <h3>18. Физиологиялық маңызы</h3>
+    <p>
+      Белсенді жұмыс істейтін ұлпаларда
+      оттегіге қажеттілік артады.
+      Гемоглобин оттегіні жеткізеді,
+      ал миоглобин бұлшықет жасушасының
+      ішінде оны байланыстырып,
+      қажет кезде босата алады.
+    </p>
+
+    <h3>19. Негізгі терминдер</h3>
+    <p>
+      Гем — құрамында темір бар топ.
+      Глобин — нәруыздық бөлік.
+      Диффузия — бөлшектердің концентрация
+      немесе парциалдық қысым айырмашылығына
+      байланысты таралуы.
+      Парциалдық қысым — газ қоспасындағы
+      белгілі бір газдың қысым үлесі.
+    </p>
+
+    <h3>20. Қорытынды</h3>
+    <p>
+      Гемоглобин мен миоглобин
+      оттегімен қайтымды байланысады.
+      Гемоглобин оттегіні тасымалдауға,
+      ал миоглобин бұлшықетте оны
+      сақтауға және таратуға бейімделген.
+    </p>
+  </div>
+
+  <div class="toolbar">
+    <button class="btn primary" id="copyNotes">
+      📋 Конспектіні көшіру
+    </button>
+    <button class="btn secondary"
+            onclick="window.print()">
+      🖨 Басып шығару
+    </button>
+  </div>
+</section>
+
+<!-- 7. ҚАТЫСУШЫЛАР -->
+<section class="screen" id="page-7">
+  <div class="eyebrow">ТАПСЫРМАЛАРҒА ДАЙЫНДЫҚ • 3 МИНУТ</div>
+  <h1>👥 Қатысушыларды белгілеу</h1>
+
+  <p class="lead">
+    Енді ғана оқушылардың тізімі ашылады.
+    24 есім дайын. Келмегендерді
+    «❌ Алып тастау» деп белгіле.
+  </p>
+
+  <div class="summary-grid">
+    <div class="summary-item">
+      <span>Қатысады</span>
+      <b id="presentCount">24</b>
+    </div>
+    <div class="summary-item">
+      <span>Қатыспайды</span>
+      <b id="absentCount">0</b>
+    </div>
+    <div class="summary-item">
+      <span>Команда</span>
+      <b id="teamCount">3</b>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button id="allPresent" class="btn secondary">
+      ✅ Бәрін қайтару
+    </button>
+  </div>
+
+  <h2>Қатысатын оқушылар</h2>
+  <div id="presentList" class="student-grid"></div>
+
+  <div class="card">
+    <h3>❌ Қатыспайтын оқушылар</h3>
+    <div id="absentList"></div>
+  </div>
+
+  <p class="feedback" id="attendanceFeedback"></p>
+
+  <h2>3 командаға бөлу</h2>
+  <div id="teamRoster" class="team-grid"></div>
+
+  <div class="callout">
+    Қатыспаған оқушы жеке сұраққа, тестке
+    және командалық ойындарға кірмейді.
+    Оны кез келген уақытта қайта қосуға болады.
+  </div>
+</section>
+
+<!-- 8. КЕЗДЕЙСОҚ АУЫЗША СҰРАҚ -->
+<section class="screen" id="page-8">
+  <div class="eyebrow">АУЫЗША • 12 МИНУТ</div>
+  <h1>🎤 Кездейсоқ ауызша сұрақ</h1>
+
+  <p class="lead">
+    «Рандом таңдау» батырмасын бас.
+    Сайт жауап бермеген оқушылардың
+    ішінен кездейсоқ біреуін таңдайды.
+    Әр оқушыға өзінің күрделі сұрағы беріледі.
+  </p>
+
+  <div class="question-card">
+    <div class="question-top">
+      <span id="oralProgressText">0 / 24</span>
+      <span class="point-label">Максимум 3 ұпай</span>
+    </div>
+
+    <div class="chosen-student" id="oralStudent">
+      🎲 Оқушыны таңдау
+    </div>
+
+    <h2 id="oralQuestion">
+      Рандом таңдау батырмасын бас.
+    </h2>
+
+    <div id="oralAnswer" class="answer-panel" hidden></div>
+
+    <div class="toolbar">
+      <button id="oralPick" class="btn primary">
+        🎲 Рандом таңдау
+      </button>
+      <button id="oralReveal" class="btn secondary">
+        👁 Жауапты көрсету
+      </button>
+    </div>
+
+    <div class="toolbar">
+      <button class="btn success oral-grade" data-points="3">
+        ✅ 3 ұпай
+      </button>
+      <button class="btn secondary oral-grade" data-points="2">
+        🟡 2 ұпай
+      </button>
+      <button class="btn secondary oral-grade" data-points="1">
+        🟠 1 ұпай
+      </button>
+      <button class="btn danger oral-grade" data-points="0">
+        ❌ 0 ұпай
+      </button>
+    </div>
+
+    <p class="feedback" id="oralFeedback"></p>
+  </div>
+
+  <h2>Бағаланған оқушылар</h2>
+  <div class="progress-grid" id="oralResults"></div>
+</section>
+
+<!-- 9. КЕЗДЕЙСОҚ ЖЕКЕ ТЕСТ -->
+<section class="screen" id="page-9">
+  <div class="eyebrow">ЖЕКЕ ТЕСТ • 6 МИНУТ</div>
+  <h1>🧠 Рандом жеке тест</h1>
+
+  <p class="lead">
+    Оқушы кездейсоқ таңдалады.
+    Әр қатысушыға өзінің күрделі тесті беріледі.
+    Дұрыс жауап +2 ұпай.
+  </p>
+
+  <div class="question-card">
+    <div class="question-top">
+      <span id="quizProgressText">0 / 24</span>
+      <span class="point-label">Максимум 2 ұпай</span>
+    </div>
+
+    <div class="chosen-student" id="quizStudent">
+      🎲 Оқушыны таңдау
+    </div>
+
+    <h2 id="quizQuestion">
+      Рандом таңдау батырмасын бас.
+    </h2>
+
+    <div id="quizOptions" class="choices"></div>
+
+    <div class="toolbar">
+      <button id="quizPick" class="btn primary">
+        🎲 Рандом таңдау
+      </button>
+      <button id="quizCheck" class="btn success">
+        ✅ Жауапты тексеру
+      </button>
+    </div>
+
+    <p class="feedback" id="quizFeedback"></p>
+  </div>
+
+  <h2>Жеке тест нәтижелері</h2>
+  <div class="progress-grid" id="quizResults"></div>
+</section>
+
+<!-- 10. 1-ОЙЫН -->
+<section class="screen" id="page-10">
+  <div class="eyebrow">1-КОМАНДАЛЫҚ ОЙЫН • 4 МИНУТ</div>
+  <h1>⚡ Ғылыми жағдаяттар батлы</h1>
+
+  <p class="lead">
+    Қарапайым анықтама емес:
+    физиологиялық жағдайды талдап,
+    ең дұрыс ғылыми түсіндірмені таңдаңдар.
+    Дұрыс жауап +3 ұпай.
+  </p>
+
+  <div id="game1Scores" class="team-grid"></div>
+
+  <div class="question-card">
+    <div class="question-top">
+      <span id="battleNumber"></span>
+      <span class="point-label" id="battleTeam"></span>
+    </div>
+
+    <div class="progress-track">
+      <div id="battleBar"></div>
+    </div>
+
+    <h2 id="battleQuestion"></h2>
+    <div id="battleOptions" class="choices"></div>
+
+    <div class="toolbar">
+      <button id="battleCheck" class="btn success">
+        ✅ Тексеру
+      </button>
+
+      <button id="battleNext" class="btn primary">
+        Келесі жағдаят →
+      </button>
+    </div>
+
+    <p class="feedback" id="battleFeedback"></p>
+  </div>
+</section>
+
+<!-- 11. 2-ОЙЫН -->
+<section class="screen" id="page-11">
+  <div class="eyebrow">2-КОМАНДАЛЫҚ ОЙЫН • 4 МИНУТ</div>
+  <h1>🧩 Қате тұжырымды анықта</h1>
+
+  <p class="lead">
+    Әр команда төрт күрделі тұжырымды
+    «Дұрыс» немесе «Қате» деп жіктейді.
+    Әр дұрыс шешім +1 ұпай.
+  </p>
+
+  <div id="game2Scores" class="team-grid"></div>
+  <div id="logicArea"></div>
+</section>
+
+<!-- 12. 3-ОЙЫН -->
+<section class="screen" id="page-12">
+  <div class="eyebrow">3-КОМАНДАЛЫҚ ОЙЫН • 3 МИНУТ</div>
+  <h1>🎨 Ғылыми дәлелдеу батлы</h1>
+
+  <p class="lead">
+    Әр командаға әртүрлі қиын тапсырма беріледі.
+    Дәптерге сызба салып, қысқаша ғылыми
+    түсіндірме дайындаңдар.
+  </p>
+
+  <div id="game3Scores" class="team-grid"></div>
+  <div id="creativeArea"></div>
+</section>
+
+<!-- 13. ҚОРЫТЫНДЫ -->
+<section class="screen" id="page-13">
+  <div class="eyebrow">ҚОРЫТЫНДЫ • 3 МИНУТ</div>
+  <h1>🏆 Сабақтың нәтижесі</h1>
+
+  <div id="winner" class="winner"></div>
+
+  <h2>Командалық ұпайлар</h2>
+  <div id="finalScores" class="team-grid"></div>
+
+  <h2>Жеке бағалар</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Оқушы</th>
+          <th>Команда</th>
+          <th>Ауызша</th>
+          <th>Тест</th>
+          <th>Барлығы</th>
+        </tr>
+      </thead>
+      <tbody id="studentResults"></tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <b>Қорытынды:</b>
+    гемоглобин — оттегіні тасымалдайтын,
+    миоглобин — оны бұлшықетте
+    сақтауға және таратуға көмектесетін нәруыз.
+  </div>
+
+  <div class="toolbar">
+    <button id="resetLesson" class="btn danger">
+      🔄 Жаңа сабақ
+    </button>
+    <button class="btn secondary"
+            onclick="window.print()">
+      🖨 Нәтижені басып шығару
+    </button>
+  </div>
+
+  <footer>MADE BY DARKHAN • BIO LAB</footer>
+</section>
+
+<div class="bottom-nav">
+  <button id="previousPage" class="btn secondary">
+    ← Артқа
+  </button>
+
+  <span id="pageIndicator">1 / 14</span>
+
+  <button id="nextPage" class="btn primary">
+    Келесі →
+  </button>
+</div>
+
+</main>
+
+<!-- ОҢ ЖАҚТАҒЫ МӘЗІР -->
+<aside class="sidebar">
+  <div class="sidebar-logo">🧬 BIO LAB</div>
+
+  <nav id="sidebarNav">
+    <button class="nav-btn active" data-page="0">🏠 Басты бет</button>
+    <button class="nav-btn" data-page="1">🩸 Эритроцит</button>
+    <button class="nav-btn" data-page="2">🔬 Гемоглобин</button>
+    <button class="nav-btn" data-page="3">💪 Миоглобин</button>
+    <button class="nav-btn" data-page="4">📈 График</button>
+    <button class="nav-btn" data-page="5">▶️ YouTube</button>
+    <button class="nav-btn" data-page="6">📚 Конспект</button>
+    <button class="nav-btn" data-page="7">👥 Қатысушылар</button>
+    <button class="nav-btn" data-page="8">🎤 Ауызша сұрақ</button>
+    <button class="nav-btn" data-page="9">🧠 Жеке тест</button>
+    <button class="nav-btn" data-page="10">⚡ 1-ойын</button>
+    <button class="nav-btn" data-page="11">🧩 2-ойын</button>
+    <button class="nav-btn" data-page="12">🎨 3-ойын</button>
+    <button class="nav-btn" data-page="13">🏆 Қорытынды</button>
+  </nav>
+
+  <div class="sidebar-bottom">
+    <div id="sidebarScores"></div>
+    <strong>BY DARKHAN</strong>
+  </div>
+</aside>
+
+</div>
+
+</body>
+</html>
+
